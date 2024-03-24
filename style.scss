@@ -1,0 +1,285 @@
+$font-family-default: Lato, sans-serif;
+$color-background-pink: #AF125A;
+$color-text-header: rgb(245, 241, 236);
+$color-text-tittle: #878B8A;
+$color-background-products: #EEEFEF;
+$color-background: #FFD65A;
+$color-background-link-hover: #ffd65add;
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: $font-family-default;
+}
+
+header {
+    display: block;
+    padding: 4em;
+    font-size: 1.2em;
+    background-color: $color-background-pink;
+    color: $color-text-header;
+    text-align: center;
+
+    #titleOne {
+        margin-left: 4%;
+    }
+
+    #titleTwo {
+        margin-right: 10%;
+    }
+
+    p {
+        display: flexbox;
+        padding: 0 70px;
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    h1 {
+        display: block;
+        margin-bottom: 0.5em;
+        font-size: 3em;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+}
+
+#contorno {
+    position: static;
+    font-size: 3em;
+    margin-bottom: 0;
+    padding-left: 3em;
+    text-align: left;
+    -webkit-text-stroke: 2px #FFFFFF;
+    color: transparent;
+}
+
+#semContorno {
+    padding-right: 0.8em;
+    text-align: right;
+}
+
+#produtos {
+    background-color: $color-background-products;
+    padding: 4em;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+    h2 {
+        padding-bottom: 1em;
+        color: $color-text-tittle;
+    }
+
+    img {
+        padding: 1em;
+        width: 10em;
+        height: 10em;
+    }
+}
+
+span {
+    color: $color-text-tittle;
+    border-bottom: 2px solid $color-text-tittle;
+}
+
+a {
+    font-size: 1.5em;
+    display: block;
+    margin: 2em;
+    text-decoration: none;
+    color: $color-text-tittle;
+    background-color: $color-background;
+    padding: 1em;
+    border-radius: 50px;
+    border: solid 2px transparent;
+
+    &:hover {
+        background-color: $color-background-link-hover;
+        border-color: $color-text-tittle;
+    }
+}
+
+#sobre {
+    display: flex;
+    padding: 3em;
+    font-size: 1.4em;
+
+    h2 {
+        font-size: 2em;
+        padding: 1em;
+        color: $color-text-tittle;
+    }
+
+    p{
+        margin-left: 44px;
+    }
+
+
+    &div {
+        &img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
+
+
+footer {
+    padding-top: 30px;
+    color: $color-background-pink;
+    display: block;
+    background-color: $color-background;
+    text-align: center;
+
+    img {
+        width: 1.5em;
+        height: 1.5em;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+}
+
+//responsividade
+
+@media screen and (min-width: 1525px){
+    #titleOne{
+        font-size: 1.5em;
+    }
+
+    #titleTwo{
+        font-size: 1.5em;
+    }
+    
+    #produtos p{
+        text-align: justify;
+        margin: 0 100px;
+    }
+
+    #sobre{
+        text-align: justify;
+    }
+
+    #sobre img{
+        width: 50%;
+    }
+
+    #sobre h2{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    #produtos {
+        flex-direction: column;
+    }
+
+    p {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    #produtos {
+        padding: 2em;
+    }
+
+    #produtos img {
+        width: 8em;
+        height: 8em;
+    }
+
+    a {
+        font-size: 1.2em;
+        margin: 1em;
+        padding: 0.5em;
+    }
+
+    #sobre h2 {
+        font-size: 2em;
+    }
+
+    div p {
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contorno {
+        padding: 0;
+        font-size: 26px;
+        text-align: left;
+    }
+
+    #titleTwo {
+        font-size: 8px;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 8px;
+    }
+
+    #produtos {
+        padding: 12px;
+    }
+
+    #produtos img {
+        width: 30%;
+        height: 30%;
+        margin-top: 10px;
+    }
+
+    #produtos p{
+        font-size: 15px;
+    }
+
+    #produtos button{
+        font-size: 25px;
+    }
+
+    a {
+        font-size: 1em;
+        margin: 0.5em;
+        padding: 0.3em;
+    }
+
+    #sobre h2 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    #sobre div p {
+        font-size: 14px;
+        text-align: justify;
+        margin: 0;
+    }
+
+    #sobre {
+        display: block;
+        font-size: 10px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
